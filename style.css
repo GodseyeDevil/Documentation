@@ -1,0 +1,17 @@
+
+body {
+    font-family: Andale Mono ;
+    background-color: #000000;
+    color: rgb(48, 158, 48);
+    margin-left: 10%;
+    padding: 0;
+}
+
+footer {
+    align-items: flex-end;
+    text-align:center;
+
+}
+h1 {
+    text-align: center;
+font-size: 50px;}
