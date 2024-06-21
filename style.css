@@ -91,3 +91,8 @@ a:hover {
 footer{
     color: aliceblue;
 }
+
+.project_heading{
+  align-items: center;
+    display: flex;
+}
