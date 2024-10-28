@@ -1,98 +1,21 @@
-header {align-items: right;}
-
-name {
-    color: blue;
-}
-
 body {
-    font-size: 20PX;
-    font-family: Andale Mono ;
-    background-color: #000000;
-    color: rgb(48, 158, 48);
-    
+    font-family: Times New Roman, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: black;
+   
 
     padding: 0;
-}
-main {margin-left: 15%;
-    margin-right: 10%;}
-footer {
-    align-items: flex-end;
-    text-align:center;
-
-}
-h1 {
-    text-align: left;
-font-size: 50px;}
-
-
-a {
+  }
+  a {
     text-decoration: none;
-    color: aquamarine;
-    
-
-}
-a:hover {
-    color: bisque;
-}
-
-#logo {
-    height: 2px;
-    align-items: left;
-}
-
-
-
-#navbar {
-    overflow: hidden;
-   text-align: left;
-   margin-left: 1%;
-   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-   
-  }
-  
-  #navbar a {
-   
-    color:antiquewhite;
-    text-decoration: none;
-    font-size: 30px;
-
-  }
-  
-  #navbar a:hover {
-    
-    color:rgb(241, 46, 12)
-  }
-  
-  #navbar a.active {
-    
-    color: white;
-  }
-  
-  .content {
-    padding: 16px;
-  }
-  
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  .sticky + .content {
-    padding-top: 60px;
+    color: #FF2400; 
+  }a:hover {
+    color: #F0FFFF;
   }
 
-  .flatbed_cutter{
-    align-items: center;
-    display: flex;
+  p {
+    color: #FFFFF0;
   }
-
-footer{
-    color: aliceblue;
-}
-
-.project_heading{
-  align-items: center;
-    display: flex;
-}
