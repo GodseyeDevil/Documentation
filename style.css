@@ -2,13 +2,19 @@ body {
     font-family: Times New Roman, serif;
     font-size: 16px;
     line-height: 1.5;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: black;
-   
-
+    margin: 0; /* Reset default margins */
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: #353935;
     padding: 0;
   }
+
+
+
+
+
+
+  
   a {
     text-decoration: none;
     color: #FF2400; 
@@ -18,4 +24,9 @@ body {
 
   p {
     color: #FFFFF0;
+    text-align: justify;
+
   }
+  h1{color: #FFFFF0;}
+  h2{color: #FFFFF0;}
+  h3{color: #FFFFF0;}
