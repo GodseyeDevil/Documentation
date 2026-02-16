@@ -1,36 +1,24 @@
-window.addEventListener('resize', () => {
-    const width = window.innerWidth;
-  
-    if (width <= 768) {
-      document.body.style.marginLeft = '5%';
-      document.body.style.marginRight = '5%';
-    } else if (width <= 992) {
-      document.body.style.marginLeft = '10%';
-      document.body.style.marginRight = '10%';
-    } else if (width <= 1200) {
-      document.body.style.marginLeft = '15%';
-      document.style.marginRight = '15%';
-    } else {
-      document.body.style.marginLeft = '25%';
-      document.body.style.marginRight = '25%';
+ function updateMargin() {
+      const screenWidth = window.innerWidth;
+
+      const minScreen = 576;     // mobile breakpoint
+      const maxScreen = 1920;    // large desktop
+
+      const minMargin = 2;       // 2%
+      const maxMargin = 35;      // 30%
+
+      // Clamp screen width between minScreen and maxScreen
+      const clampedWidth = Math.max(minScreen, Math.min(screenWidth, maxScreen));
+
+      // Calculate smooth ratio
+      const ratio = (clampedWidth - minScreen) / (maxScreen - minScreen);
+
+      // Linear interpolation
+      const marginValue = minMargin + ratio * (maxMargin - minMargin);
+
+      document.body.style.marginLeft = marginValue + "%";
+      document.body.style.marginRight = marginValue + "%";
     }
-  });
-  
-  // Initial setup on page load
-  window.onload = () => {
-    const width = window.innerWidth;
-    // Apply initial margins based on screen width
-    if (width <= 768) {
-      document.body.style.marginLeft = '5%';
-      document.body.style.marginRight = '5%';
-    } else if (width <= 992) {
-      document.body.style.marginLeft = '10%';
-      document.body.style.marginRight = '10%';
-    } else if (width <= 1200) {
-      document.body.style.marginLeft = '15%';
-      document.style.marginRight = '15%';
-    } else {
-      document.body.style.marginLeft = '25%';
-      document.body.style.marginRight = '25%';
-    }
-  };
+
+    window.addEventListener("resize", updateMargin);
+    window.addEventListener("load", updateMargin);
