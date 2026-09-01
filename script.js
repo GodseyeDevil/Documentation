@@ -5,7 +5,7 @@
       const maxScreen = 1920;    // large desktop
 
       const minMargin = 2;       // 2%
-      const maxMargin = 35;      // 30%
+      const maxMargin = 30;      // 30%
 
       // Clamp screen width between minScreen and maxScreen
       const clampedWidth = Math.max(minScreen, Math.min(screenWidth, maxScreen));
