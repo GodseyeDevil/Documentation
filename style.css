@@ -48,3 +48,210 @@ li {
     font-size: 25px;
     text-align: right;
 }
+
+
+
+
+
+
+/* Documentation tree */
+.documentation-tree {
+  --tree-line: #2dff03;
+  --tree-text: inherit;
+  --tree-hover: rgba(128, 128, 128, 0.12);
+
+  color: var(--tree-text);
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 1.8;
+  background: transparent;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: 20%;
+  Font 
+}
+
+/* Remove default list styling */
+.documentation-tree ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 22px;
+}
+
+/* Root level */
+.documentation-tree > ul {
+  padding-left: 0;
+}
+
+/* Each tree branch */
+.documentation-tree li {
+  position: relative;
+  margin: 0;
+  padding: 2px 0;
+}
+
+/* Vertical connector lines */
+.documentation-tree .tree-children {
+  position: relative;
+  margin-left: 7px;
+  padding-left: 22px;
+  border-left: 3px solid var(--tree-line);
+}
+
+/* Horizontal connector lines */
+.documentation-tree .tree-children > li::before {
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: 17px;
+  width: 21px;
+  border-top: 3px solid var(--tree-line);
+}
+
+/* Hide connector for collapsed branches */
+.documentation-tree ul[hidden] {
+  display: none;
+}
+
+/* Folder toggle */
+.documentation-tree .tree-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 3px 7px;
+  margin-left: -7px;
+
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Expand/collapse arrow */
+.documentation-tree .tree-arrow {
+  display: inline-block;
+  width: 12px;
+  font-size: 10px;
+  color: var(--tree-line);
+  transition: transform 0.15s ease;
+}
+
+/* Folder and file icons */
+.documentation-tree .folder-icon,
+.documentation-tree .file-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Document links */
+.documentation-tree .tree-file {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+}
+
+.documentation-tree .tree-file a {
+  color: inherit;
+  text-decoration: none;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+/* Hover effects without a surrounding box */
+.documentation-tree .tree-toggle:hover,
+.documentation-tree .tree-file a:hover {
+  background: var(--tree-hover);
+}
+
+/* Keyboard focus */
+.documentation-tree button:focus-visible,
+.documentation-tree a:focus-visible {
+  outline: 2px solid #6b9eff;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .documentation-tree {
+    font-size: 13px;
+  }
+
+  .documentation-tree ul {
+    padding-left: 17px;
+  }
+
+  .documentation-tree .tree-children {
+    padding-left: 17px;
+  }
+
+  .documentation-tree .tree-children > li::before {
+    left: -17px;
+    width: 16px;
+  }
+}
+
+
+
+
+
+.equations {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.equations h3 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 24px;
+}
+
+.equation {
+  font-size: 18px;
+  margin: 16px 0;
+  line-height: 1.8;
+}
+
+.red {
+  color: #ff526b;
+}
+
+.blue {
+  color: #25cfff;
+}
+
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0.85em;
+  line-height: 1.2;
+  margin: 0 4px;
+}
+
+.fraction span:first-child {
+  border-bottom: 1px solid currentColor;
+  padding: 0 5px 2px;
+}
+
+.fraction span:last-child {
+  padding-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .equation {
+    font-size: 14px;
+  }
+
+  .equations {
+    padding: 12px;
+  }
+}
+
